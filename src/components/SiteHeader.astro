@@ -1,0 +1,33 @@
+---
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const navigation = [
+  { href: "/", label: "Accueil" },
+  { href: "/approche", label: "Mon approche" },
+  { href: "/motifs", label: "Motifs" },
+  { href: "/seances", label: "Seances" },
+  { href: "/parcours", label: "Parcours" },
+  { href: "/contact", label: "Contact" }
+];
+---
+
+<header class="site-header">
+  <a class="brand" href="/">
+    <span class="brand-title">Charles-Antoine Menanteau</span>
+    <span class="brand-subtitle">Psychologue • Psychothérapeute • Hypnothérapeute</span>
+  </a>
+
+  <nav class="site-nav" aria-label="Navigation principale">
+    {
+      navigation.map((item) => (
+        <a class={currentPath === item.href ? "is-active" : ""} href={item.href}>
+          {item.label}
+        </a>
+      ))
+    }
+  </nav>
+</header>

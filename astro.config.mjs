@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
-export default defineConfig(({ command }) => ({
+export default defineConfig({
   site: "https://thomasrehault-ux.github.io",
-  base: command === "build" ? "/site-charles-antoine-menanteau" : "/"
-}));
+  base: "/site-charles-antoine-menanteau"
+});

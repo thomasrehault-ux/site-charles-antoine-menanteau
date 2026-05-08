@@ -1,3 +1,8 @@
+---
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+const withBase = (path: string) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${path}`);
+---
+
 <footer class="site-footer">
   <div>
     <h3>Charles-Antoine Menanteau</h3>
@@ -13,7 +18,7 @@
     <h4>Contact</h4>
     <p>06 00 00 00 00</p>
     <p>contact@charlesantoine-menanteau.fr</p>
-    <p><a href="/contact">Formulaire de contact</a></p>
+    <p><a href={withBase("/contact")}>Formulaire de contact</a></p>
   </div>
   <div class="footer-mark" aria-hidden="true"></div>
 </footer>

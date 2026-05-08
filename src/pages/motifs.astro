@@ -7,16 +7,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   description="Motifs de consultation: anxiete, burn-out, addictions, troubles alimentaires, trauma, deuil et perte de sens."
   currentPath="/motifs"
 >
-  <section class="page-hero">
-    <p class="page-eyebrow">Motifs de consultation</p>
-    <h1>Des difficultes differentes, une meme attention a ce qui se vit.</h1>
-    <p class="page-intro">
-      La consultation peut concerner des moments de souffrance psychique, de crise, d'epuisement
-      ou de questionnement existentiel. Chaque situation est accueillie dans sa singularite.
-    </p>
+  <section class="page-hero-grid">
+    <div class="page-hero-copy">
+      <p class="page-eyebrow">Motifs de consultation</p>
+      <h1>Des difficultes differentes, une meme attention a ce qui se vit.</h1>
+      <span class="heading-rule"></span>
+      <p class="page-intro">
+        La consultation peut concerner des moments de souffrance psychique, de crise, d'epuisement
+        ou de questionnement existentiel. Chaque situation est accueillie dans sa singularite.
+      </p>
+    </div>
+    <div class="page-hero-visual">
+      <div class="page-hero-art page-hero-art-motifs"></div>
+    </div>
   </section>
 
-  <section class="content-grid content-grid-3">
+  <section class="content-grid content-grid-3 page-section">
     <article class="content-card"><h2>Anxiete et stress</h2><p>Crises d'angoisse, tension interieure, sentiment de debordement, inquietude persistante.</p></article>
     <article class="content-card"><h2>Burn-out et depression</h2><p>Epuisement psychique, perte d'elan, retrait, difficulte a retrouver des reperes et une energie vitale.</p></article>
     <article class="content-card"><h2>Addictions</h2><p>Dependances, repetitions, conduites d'echappement et rapport difficile a la limite ou au manque.</p></article>

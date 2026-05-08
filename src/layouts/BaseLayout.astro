@@ -27,8 +27,8 @@ const { title, description, currentPath } = Astro.props;
     />
   </head>
   <body>
+    <SiteHeader currentPath={currentPath} />
     <div class="page-shell">
-      <SiteHeader currentPath={currentPath} />
       <main>
         <slot />
       </main>

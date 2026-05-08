@@ -7,16 +7,22 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   description="Cadre des seances, premier rendez-vous, hypnose, reve eveille et modalites d'accompagnement."
   currentPath="/seances"
 >
-  <section class="page-hero">
-    <p class="page-eyebrow">Seances</p>
-    <h1>Un cadre clair, confidentiel et adapte a chaque situation.</h1>
-    <p class="page-intro">
-      Les seances commencent par un premier temps d'echange pour comprendre ce qui est traverse,
-      preciser les besoins et definir ensemble un cadre de suivi ajusté.
-    </p>
+  <section class="page-hero-grid">
+    <div class="page-hero-copy">
+      <p class="page-eyebrow">Seances</p>
+      <h1>Un cadre clair, confidentiel et adapte a chaque situation.</h1>
+      <span class="heading-rule"></span>
+      <p class="page-intro">
+        Les seances commencent par un premier temps d'echange pour comprendre ce qui est traverse,
+        preciser les besoins et definir ensemble un cadre de suivi ajusté.
+      </p>
+    </div>
+    <div class="page-hero-visual">
+      <div class="page-hero-art page-hero-art-interior"></div>
+    </div>
   </section>
 
-  <section class="content-grid">
+  <section class="content-grid page-section">
     <article class="content-card">
       <h2>Le premier rendez-vous</h2>
       <p>
@@ -33,7 +39,7 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </article>
   </section>
 
-  <section class="long-copy">
+  <section class="long-copy page-section page-section-soft">
     <h2>Modalites</h2>
     <ul class="bullet-list">
       <li>Consultations en cabinet a Nantes.</li>

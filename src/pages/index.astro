@@ -30,15 +30,17 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
         <a class="button button-secondary" href={withBase("/approche")}>Découvrir mon approche</a>
       </div>
       <p class="hero-note">
-        <span class="note-icon" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><rect x="4" y="6" width="16" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M8 4v4M16 4v4M4 10h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-        </span>
         Consultations en cabinet et en visio
       </p>
     </div>
 
     <div class="hero-visual">
-      <div class="hero-visual-art"></div>
+      <div class="hero-visual-art">
+        <div class="visual-caption">
+          <span>Cadre de travail</span>
+          <p>Un espace calme pour remettre du mouvement dans ce qui semblait figé.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -104,26 +106,86 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
     </div>
 
     <div class="motif-list">
-      <article class="motif-row">
-        <h3>Anxiété et stress</h3>
-        <p>Crises d’angoisse, tension intérieure, sentiment de débordement ou difficulté à retrouver un apaisement durable.</p>
-      </article>
-      <article class="motif-row">
-        <h3>Burn-out et dépression</h3>
-        <p>Épuisement psychique, perte d’élan, fatigue morale, retrait ou difficulté à retrouver des repères dans le quotidien.</p>
-      </article>
-      <article class="motif-row">
-        <h3>Addictions et dépendances</h3>
-        <p>Conduites répétitives, dépendances, rapport difficile au manque, à la limite ou aux formes d’évitement.</p>
-      </article>
-      <article class="motif-row">
-        <h3>Troubles alimentaires</h3>
-        <p>Rapport conflictuel au corps, à l’alimentation, au contrôle ou à la régulation émotionnelle.</p>
-      </article>
-      <article class="motif-row">
-        <h3>Trauma, deuil et perte de sens</h3>
-        <p>Événements difficiles, séparations, ruptures, traces persistantes, crise existentielle ou impression de désorientation.</p>
-      </article>
+      <details class="motif-panel">
+        <summary class="motif-summary">
+          <span class="motif-title">
+            <span class="motif-kicker">Anxiété</span>
+            <span class="motif-heading">Anxiété et stress</span>
+          </span>
+          <span class="motif-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="motif-detail">
+          <p>
+            Crises d’angoisse, tension intérieure, sentiment de débordement ou difficulté à
+            retrouver un apaisement durable.
+          </p>
+          <a class="text-link" href={withBase("/motifs")}>Voir la page motifs</a>
+        </div>
+      </details>
+      <details class="motif-panel">
+        <summary class="motif-summary">
+          <span class="motif-title">
+            <span class="motif-kicker">Épuisement</span>
+            <span class="motif-heading">Burn-out et dépression</span>
+          </span>
+          <span class="motif-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="motif-detail">
+          <p>
+            Épuisement psychique, perte d’élan, fatigue morale, retrait ou difficulté à retrouver
+            des repères dans le quotidien.
+          </p>
+          <a class="text-link" href={withBase("/motifs")}>Voir la page motifs</a>
+        </div>
+      </details>
+      <details class="motif-panel">
+        <summary class="motif-summary">
+          <span class="motif-title">
+            <span class="motif-kicker">Dépendances</span>
+            <span class="motif-heading">Addictions et dépendances</span>
+          </span>
+          <span class="motif-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="motif-detail">
+          <p>
+            Conduites répétitives, dépendances, rapport difficile au manque, à la limite ou aux
+            formes d’évitement.
+          </p>
+          <a class="text-link" href={withBase("/motifs")}>Voir la page motifs</a>
+        </div>
+      </details>
+      <details class="motif-panel">
+        <summary class="motif-summary">
+          <span class="motif-title">
+            <span class="motif-kicker">Corps</span>
+            <span class="motif-heading">Troubles alimentaires</span>
+          </span>
+          <span class="motif-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="motif-detail">
+          <p>
+            Rapport conflictuel au corps, à l’alimentation, au contrôle ou à la régulation
+            émotionnelle.
+          </p>
+          <a class="text-link" href={withBase("/motifs")}>Voir la page motifs</a>
+        </div>
+      </details>
+      <details class="motif-panel">
+        <summary class="motif-summary">
+          <span class="motif-title">
+            <span class="motif-kicker">Événements difficiles</span>
+            <span class="motif-heading">Trauma, deuil et perte de sens</span>
+          </span>
+          <span class="motif-toggle" aria-hidden="true"></span>
+        </summary>
+        <div class="motif-detail">
+          <p>
+            Événements difficiles, séparations, ruptures, traces persistantes, crise existentielle
+            ou impression de désorientation.
+          </p>
+          <a class="text-link" href={withBase("/motifs")}>Voir la page motifs</a>
+        </div>
+      </details>
     </div>
 
     <div class="section-link-row">
@@ -152,6 +214,9 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
 
     <div class="approach-visual">
       <div class="approach-visual-art"></div>
+      <div class="approach-note">
+        <p>Un espace pour relier ce qui se pense, ce qui se ressent et ce qui cherche à se transformer.</p>
+      </div>
     </div>
   </section>
 

@@ -77,10 +77,14 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
     </div>
 
     <div class="approach-principles">
-      <article class="approach-principle">
-        <div class="approach-principle-meta">
-          <h3>Partir de l’expérience vécue</h3>
-        </div>
+      <details class="approach-principle dynamic-panel" open>
+        <summary class="dynamic-summary">
+          <span>
+            <span class="dynamic-kicker">Repère 01</span>
+            <span class="dynamic-heading">Partir de l’expérience vécue</span>
+          </span>
+          <span class="dynamic-toggle" aria-hidden="true"></span>
+        </summary>
         <div class="approach-principle-copy">
           <p>
             La thérapie commence par ce qui est là: ce qui fait souffrance, ce qui déborde, ce qui
@@ -92,12 +96,16 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
             retrouver un contact plus juste avec ce qui se joue réellement.
           </p>
         </div>
-      </article>
+      </details>
 
-      <article class="approach-principle">
-        <div class="approach-principle-meta">
-          <h3>Travailler avec plusieurs niveaux</h3>
-        </div>
+      <details class="approach-principle dynamic-panel">
+        <summary class="dynamic-summary">
+          <span>
+            <span class="dynamic-kicker">Repère 02</span>
+            <span class="dynamic-heading">Travailler avec plusieurs niveaux</span>
+          </span>
+          <span class="dynamic-toggle" aria-hidden="true"></span>
+        </summary>
         <div class="approach-principle-copy">
           <p>
             La parole reste centrale, mais elle n’est pas le seul chemin. Selon les situations, le
@@ -109,12 +117,16 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
             réellement soutenir l’élaboration psychique et ouvrir un accès différent à soi-même.
           </p>
         </div>
-      </article>
+      </details>
 
-      <article class="approach-principle">
-        <div class="approach-principle-meta">
-          <h3>Respecter le rythme propre de chacun</h3>
-        </div>
+      <details class="approach-principle dynamic-panel">
+        <summary class="dynamic-summary">
+          <span>
+            <span class="dynamic-kicker">Repère 03</span>
+            <span class="dynamic-heading">Respecter le rythme propre de chacun</span>
+          </span>
+          <span class="dynamic-toggle" aria-hidden="true"></span>
+        </summary>
         <div class="approach-principle-copy">
           <p>
             Chaque histoire, chaque fragilité et chaque ressource demande une manière d’accompagner
@@ -126,7 +138,7 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
             chercher une performance thérapeutique.
           </p>
         </div>
-      </article>
+      </details>
     </div>
   </section>
 
@@ -161,18 +173,27 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
     </div>
 
     <div class="approach-outcomes">
-      <article>
-        <h3>Un espace d’élaboration</h3>
+      <details class="outcome-panel dynamic-panel" open>
+        <summary class="dynamic-summary">
+          <span class="dynamic-heading">Un espace d’élaboration</span>
+          <span class="dynamic-toggle" aria-hidden="true"></span>
+        </summary>
         <p>Mettre en mots, relier, comprendre et sortir d’un vécu diffus ou envahissant.</p>
-      </article>
-      <article>
-        <h3>Un appui plus stable</h3>
+      </details>
+      <details class="outcome-panel dynamic-panel">
+        <summary class="dynamic-summary">
+          <span class="dynamic-heading">Un appui plus stable</span>
+          <span class="dynamic-toggle" aria-hidden="true"></span>
+        </summary>
         <p>Retrouver de l’ancrage, de la continuité intérieure et une capacité plus souple à faire face.</p>
-      </article>
-      <article>
-        <h3>Une transformation plus durable</h3>
+      </details>
+      <details class="outcome-panel dynamic-panel">
+        <summary class="dynamic-summary">
+          <span class="dynamic-heading">Une transformation plus durable</span>
+          <span class="dynamic-toggle" aria-hidden="true"></span>
+        </summary>
         <p>Ne pas seulement apaiser l’urgence, mais faire évoluer certains modes de fonctionnement en profondeur.</p>
-      </article>
+      </details>
     </div>
   </section>
 

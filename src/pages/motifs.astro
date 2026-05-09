@@ -22,12 +22,66 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <section class="content-grid content-grid-3 page-section">
-    <article class="content-card"><h2>Anxiete et stress</h2><p>Crises d'angoisse, tension interieure, sentiment de debordement, inquietude persistante.</p></article>
-    <article class="content-card"><h2>Burn-out et depression</h2><p>Epuisement psychique, perte d'elan, retrait, difficulte a retrouver des reperes et une energie vitale.</p></article>
-    <article class="content-card"><h2>Addictions</h2><p>Dependances, repetitions, conduites d'echappement et rapport difficile a la limite ou au manque.</p></article>
-    <article class="content-card"><h2>Troubles alimentaires</h2><p>Rapport conflictuel au corps, a l'alimentation, au controle ou a la regulation emotionnelle.</p></article>
-    <article class="content-card"><h2>Trauma</h2><p>Evenements difficiles, traces persistantes, etat d'alerte, sidération ou envahissement emotionnel.</p></article>
-    <article class="content-card"><h2>Deuil et perte de sens</h2><p>Separations, ruptures, morts, remaniements de vie, crises existentielles et passages interieurs.</p></article>
+  <section class="dynamic-grid page-section">
+    <details class="content-card dynamic-panel" open>
+      <summary class="dynamic-summary">
+        <span>
+          <span class="dynamic-kicker">Anxiété</span>
+          <span class="dynamic-heading">Anxiete et stress</span>
+        </span>
+        <span class="dynamic-toggle" aria-hidden="true"></span>
+      </summary>
+      <p>Crises d'angoisse, tension interieure, sentiment de debordement, inquietude persistante.</p>
+    </details>
+    <details class="content-card dynamic-panel">
+      <summary class="dynamic-summary">
+        <span>
+          <span class="dynamic-kicker">Épuisement</span>
+          <span class="dynamic-heading">Burn-out et depression</span>
+        </span>
+        <span class="dynamic-toggle" aria-hidden="true"></span>
+      </summary>
+      <p>Epuisement psychique, perte d'elan, retrait, difficulte a retrouver des reperes et une energie vitale.</p>
+    </details>
+    <details class="content-card dynamic-panel">
+      <summary class="dynamic-summary">
+        <span>
+          <span class="dynamic-kicker">Dépendances</span>
+          <span class="dynamic-heading">Addictions</span>
+        </span>
+        <span class="dynamic-toggle" aria-hidden="true"></span>
+      </summary>
+      <p>Dependances, repetitions, conduites d'echappement et rapport difficile a la limite ou au manque.</p>
+    </details>
+    <details class="content-card dynamic-panel">
+      <summary class="dynamic-summary">
+        <span>
+          <span class="dynamic-kicker">Corps</span>
+          <span class="dynamic-heading">Troubles alimentaires</span>
+        </span>
+        <span class="dynamic-toggle" aria-hidden="true"></span>
+      </summary>
+      <p>Rapport conflictuel au corps, a l'alimentation, au controle ou a la regulation emotionnelle.</p>
+    </details>
+    <details class="content-card dynamic-panel">
+      <summary class="dynamic-summary">
+        <span>
+          <span class="dynamic-kicker">Événement</span>
+          <span class="dynamic-heading">Trauma</span>
+        </span>
+        <span class="dynamic-toggle" aria-hidden="true"></span>
+      </summary>
+      <p>Evenements difficiles, traces persistantes, etat d'alerte, sidération ou envahissement emotionnel.</p>
+    </details>
+    <details class="content-card dynamic-panel">
+      <summary class="dynamic-summary">
+        <span>
+          <span class="dynamic-kicker">Sens</span>
+          <span class="dynamic-heading">Deuil et perte de sens</span>
+        </span>
+        <span class="dynamic-toggle" aria-hidden="true"></span>
+      </summary>
+      <p>Separations, ruptures, morts, remaniements de vie, crises existentielles et passages interieurs.</p>
+    </details>
   </section>
 </BaseLayout>

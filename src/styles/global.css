@@ -1048,6 +1048,170 @@ li {
   margin-bottom: 12px;
 }
 
+.dynamic-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.dynamic-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.dynamic-panel {
+  --panel-accent: var(--blue-muted);
+}
+
+.dynamic-panel:nth-child(2),
+.dynamic-panel:nth-child(5) {
+  --panel-accent: var(--blue-accent);
+}
+
+.dynamic-panel:nth-child(3) {
+  --panel-accent: var(--blue-violet);
+}
+
+.dynamic-panel:nth-child(4),
+.dynamic-panel:nth-child(6) {
+  --panel-accent: var(--blue-pale);
+}
+
+.content-card.dynamic-panel,
+.timeline-item.dynamic-panel,
+.outcome-panel.dynamic-panel,
+.approach-principle.dynamic-panel,
+.dynamic-panel-wide {
+  border-left: 4px solid var(--panel-accent);
+  overflow: hidden;
+}
+
+.dynamic-panel[open] {
+  background: rgba(255, 250, 243, 0.74);
+  box-shadow: var(--shadow-soft);
+}
+
+.dynamic-panel-wide {
+  padding: 24px 26px;
+  border-radius: 8px;
+}
+
+.dynamic-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 34px;
+  gap: 18px;
+  align-items: center;
+  cursor: pointer;
+  list-style: none;
+}
+
+.dynamic-summary::-webkit-details-marker {
+  display: none;
+}
+
+.dynamic-summary::marker {
+  content: "";
+}
+
+.dynamic-summary:focus {
+  outline: none;
+}
+
+.dynamic-summary:focus-visible {
+  outline: 2px solid rgba(65, 109, 146, 0.38);
+  outline-offset: 6px;
+}
+
+.dynamic-kicker {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--panel-accent);
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0;
+}
+
+.dynamic-heading {
+  display: block;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.62rem;
+  font-weight: 600;
+  line-height: 1.08;
+}
+
+.dynamic-toggle {
+  position: relative;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid rgba(109, 136, 164, 0.32);
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.dynamic-toggle::before,
+.dynamic-toggle::after {
+  content: "";
+  position: absolute;
+  inset: 50% auto auto 50%;
+  width: 13px;
+  height: 2px;
+  background: var(--panel-accent);
+  transform: translate(-50%, -50%);
+}
+
+.dynamic-toggle::after {
+  transform: translate(-50%, -50%) rotate(90deg);
+  transition: transform 160ms ease;
+}
+
+.dynamic-panel[open] .dynamic-toggle::after {
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+
+.content-card.dynamic-panel > p,
+.timeline-item.dynamic-panel > p,
+.outcome-panel.dynamic-panel > p,
+.dynamic-panel-wide > .bullet-list {
+  margin: 0;
+  padding-top: 16px;
+}
+
+.outcome-panel.dynamic-panel {
+  padding: 22px;
+  border: 1px solid rgba(157, 170, 181, 0.2);
+  border-left: 4px solid var(--panel-accent);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.approach-principle.dynamic-panel {
+  display: block;
+  padding: 0;
+  border: 1px solid rgba(157, 170, 181, 0.2);
+  border-left: 4px solid var(--panel-accent);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.34);
+}
+
+.approach-principle.dynamic-panel:first-child {
+  padding-top: 0;
+  border-top: 1px solid rgba(157, 170, 181, 0.2);
+}
+
+.approach-principle.dynamic-panel .dynamic-summary {
+  padding: 22px 24px;
+}
+
+.approach-principle-copy {
+  max-width: none;
+  padding: 0 24px 24px;
+}
+
+.outcome-panel.dynamic-panel[open],
+.approach-principle.dynamic-panel[open] {
+  background: rgba(255, 250, 243, 0.74);
+}
+
 .cta-band {
   margin-top: 26px;
   display: grid;
@@ -1125,6 +1289,8 @@ li {
   .page-hub-grid,
   .content-grid,
   .content-grid-3,
+  .dynamic-grid,
+  .dynamic-grid-2,
   .tool-grid,
   .parcours-timeline,
   .approach-outcomes {
@@ -1198,6 +1364,22 @@ li {
 
   .motif-detail {
     padding: 0 18px 20px;
+  }
+
+  .dynamic-summary {
+    gap: 14px;
+  }
+
+  .approach-principle.dynamic-panel .dynamic-summary {
+    padding: 18px;
+  }
+
+  .approach-principle-copy {
+    padding: 0 18px 20px;
+  }
+
+  .dynamic-panel-wide {
+    padding: 22px 20px;
   }
 
   .hero-visual {

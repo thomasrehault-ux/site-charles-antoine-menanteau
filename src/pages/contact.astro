@@ -22,14 +22,26 @@ import BaseLayout from "../layouts/BaseLayout.astro";
     </div>
   </section>
 
-  <section class="content-grid page-section">
-    <article class="content-card">
-      <h2>Consultations</h2>
+  <section class="dynamic-grid dynamic-grid-2 page-section">
+    <details class="content-card dynamic-panel" open>
+      <summary class="dynamic-summary">
+        <span>
+          <span class="dynamic-kicker">Rendez-vous</span>
+          <span class="dynamic-heading">Consultations</span>
+        </span>
+        <span class="dynamic-toggle" aria-hidden="true"></span>
+      </summary>
       <p>En cabinet a Nantes et en visio, sur rendez-vous.</p>
-    </article>
-    <article class="content-card">
-      <h2>Coordonnees</h2>
+    </details>
+    <details class="content-card dynamic-panel">
+      <summary class="dynamic-summary">
+        <span>
+          <span class="dynamic-kicker">Contact direct</span>
+          <span class="dynamic-heading">Coordonnees</span>
+        </span>
+        <span class="dynamic-toggle" aria-hidden="true"></span>
+      </summary>
       <p>Telephone, email, adresse precise, horaires et acces seront a confirmer.</p>
-    </article>
+    </details>
   </section>
 </BaseLayout>

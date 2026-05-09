@@ -23,17 +23,35 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <section class="timeline page-section">
-    <article class="timeline-item">
-      <h2>Formation universitaire</h2>
+    <details class="timeline-item dynamic-panel" open>
+      <summary class="dynamic-summary">
+        <span>
+          <span class="dynamic-kicker">Repère 01</span>
+          <span class="dynamic-heading">Formation universitaire</span>
+        </span>
+        <span class="dynamic-toggle" aria-hidden="true"></span>
+      </summary>
       <p>Master 2 de psychologie clinique, travaux de recherche et experience de terrain en clinique institutionnelle.</p>
-    </article>
-    <article class="timeline-item">
-      <h2>Formations complementaires</h2>
+    </details>
+    <details class="timeline-item dynamic-panel">
+      <summary class="dynamic-summary">
+        <span>
+          <span class="dynamic-kicker">Repère 02</span>
+          <span class="dynamic-heading">Formations complementaires</span>
+        </span>
+        <span class="dynamic-toggle" aria-hidden="true"></span>
+      </summary>
       <p>Hypnose therapeutique, rTMS, travail psycho-corporel, respiration, imaginaire et transmission phenomeno-existentielle.</p>
-    </article>
-    <article class="timeline-item">
-      <h2>Experience clinique</h2>
+    </details>
+    <details class="timeline-item dynamic-panel">
+      <summary class="dynamic-summary">
+        <span>
+          <span class="dynamic-kicker">Repère 03</span>
+          <span class="dynamic-heading">Experience clinique</span>
+        </span>
+        <span class="dynamic-toggle" aria-hidden="true"></span>
+      </summary>
       <p>Consultations aupres d'adolescents et d'adultes, accompagnement des troubles alimentaires, des crises de sens, du trauma et de la depression.</p>
-    </article>
+    </details>
   </section>
 </BaseLayout>

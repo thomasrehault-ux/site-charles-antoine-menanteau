@@ -1,20 +1,115 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+const motifs = [
+  {
+    title: "Anxiété et stress",
+    terms: [
+      "crises d’angoisse",
+      "tension intérieure",
+      "sentiment de débordement",
+      "inquiétude persistante",
+      "insomnie",
+      "ruminations",
+      "anticipations anxieuses",
+      "irritabilité",
+      "agitation intérieure",
+      "difficulté à s’apaiser"
+    ]
+  },
+  {
+    title: "Burn-out et dépression",
+    terms: [
+      "épuisement psychique",
+      "perte d’élan",
+      "retrait",
+      "perte de repères",
+      "fatigue morale",
+      "anhédonie",
+      "dévalorisation",
+      "ralentissement",
+      "ruminations",
+      "difficulté à retrouver une énergie vitale"
+    ]
+  },
+  {
+    title: "Addictions",
+    terms: [
+      "dépendances",
+      "répétitions",
+      "conduites d’échappement",
+      "rapport difficile à la limite",
+      "rapport difficile au manque",
+      "obsessions",
+      "compulsions",
+      "perte de contrôle",
+      "recherche d’apaisement",
+      "conduites à risque"
+    ]
+  },
+  {
+    title: "Troubles des conduites alimentaires (TCA)",
+    terms: [
+      "rapport conflictuel au corps",
+      "rapport conflictuel à l’alimentation",
+      "contrôle",
+      "restriction",
+      "crises",
+      "hyperphagie",
+      "boulimie",
+      "anorexie",
+      "image corporelle",
+      "régulation émotionnelle"
+    ]
+  },
+  {
+    title: "Trauma",
+    terms: [
+      "événements difficiles",
+      "traces persistantes",
+      "empreintes traumatiques",
+      "état d’alerte",
+      "sidération",
+      "envahissement émotionnel",
+      "hypervigilance",
+      "cauchemars à répétition",
+      "dissociation",
+      "évitements"
+    ]
+  },
+  {
+    title: "Deuil et perte de sens",
+    terms: [
+      "séparations",
+      "ruptures",
+      "décès",
+      "remaniements de vie",
+      "crises existentielles",
+      "étapes de vie",
+      "grossesse",
+      "post-partum",
+      "mariage",
+      "déménagement",
+      "réorientation professionnelle",
+      "retraite"
+    ]
+  }
+];
 ---
 
 <BaseLayout
   title="Motifs de consultation | Charles-Antoine Menanteau"
-  description="Motifs de consultation: anxiete, burn-out, addictions, troubles alimentaires, trauma, deuil et perte de sens."
+  description="Motifs de consultation: anxiété, burn-out, addictions, troubles des conduites alimentaires, trauma, deuil et perte de sens."
   currentPath="/motifs"
 >
   <section class="page-hero-grid">
     <div class="page-hero-copy">
       <p class="page-eyebrow">Motifs de consultation</p>
-      <h1>Des difficultes differentes, une meme attention a ce qui se vit.</h1>
+      <h1>Des difficultés différentes, une même attention à ce qui se vit.</h1>
       <span class="heading-rule"></span>
       <p class="page-intro">
-        La consultation peut concerner des moments de souffrance psychique, de crise, d'epuisement
-        ou de questionnement existentiel. Chaque situation est accueillie dans sa singularite.
+        La consultation peut concerner des moments de souffrance psychique, de crise, d’épuisement
+        ou de questionnement existentiel. Chaque situation est accueillie dans sa singularité.
       </p>
     </div>
     <div class="page-hero-visual">
@@ -23,65 +118,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <section class="dynamic-grid page-section">
-    <details class="content-card dynamic-panel">
-      <summary class="dynamic-summary">
-        <span>
-          <span class="dynamic-kicker">Anxiété</span>
-          <span class="dynamic-heading">Anxiete et stress</span>
-        </span>
-        <span class="dynamic-toggle" aria-hidden="true"></span>
-      </summary>
-      <p>Crises d'angoisse, tension interieure, sentiment de debordement, inquietude persistante.</p>
-    </details>
-    <details class="content-card dynamic-panel">
-      <summary class="dynamic-summary">
-        <span>
-          <span class="dynamic-kicker">Épuisement</span>
-          <span class="dynamic-heading">Burn-out et depression</span>
-        </span>
-        <span class="dynamic-toggle" aria-hidden="true"></span>
-      </summary>
-      <p>Epuisement psychique, perte d'elan, retrait, difficulte a retrouver des reperes et une energie vitale.</p>
-    </details>
-    <details class="content-card dynamic-panel">
-      <summary class="dynamic-summary">
-        <span>
-          <span class="dynamic-kicker">Dépendances</span>
-          <span class="dynamic-heading">Addictions</span>
-        </span>
-        <span class="dynamic-toggle" aria-hidden="true"></span>
-      </summary>
-      <p>Dependances, repetitions, conduites d'echappement et rapport difficile a la limite ou au manque.</p>
-    </details>
-    <details class="content-card dynamic-panel">
-      <summary class="dynamic-summary">
-        <span>
-          <span class="dynamic-kicker">Corps</span>
-          <span class="dynamic-heading">Troubles alimentaires</span>
-        </span>
-        <span class="dynamic-toggle" aria-hidden="true"></span>
-      </summary>
-      <p>Rapport conflictuel au corps, a l'alimentation, au controle ou a la regulation emotionnelle.</p>
-    </details>
-    <details class="content-card dynamic-panel">
-      <summary class="dynamic-summary">
-        <span>
-          <span class="dynamic-kicker">Événement</span>
-          <span class="dynamic-heading">Trauma</span>
-        </span>
-        <span class="dynamic-toggle" aria-hidden="true"></span>
-      </summary>
-      <p>Evenements difficiles, traces persistantes, etat d'alerte, sidération ou envahissement emotionnel.</p>
-    </details>
-    <details class="content-card dynamic-panel">
-      <summary class="dynamic-summary">
-        <span>
-          <span class="dynamic-kicker">Sens</span>
-          <span class="dynamic-heading">Deuil et perte de sens</span>
-        </span>
-        <span class="dynamic-toggle" aria-hidden="true"></span>
-      </summary>
-      <p>Separations, ruptures, morts, remaniements de vie, crises existentielles et passages interieurs.</p>
-    </details>
+    {
+      motifs.map((motif) => (
+        <details class="content-card dynamic-panel">
+          <summary class="dynamic-summary">
+            <span class="dynamic-heading">{motif.title}</span>
+            <span class="dynamic-toggle" aria-hidden="true"></span>
+          </summary>
+          <ul class="keyword-list" aria-label={`Mots-clés associés à ${motif.title}`}>
+            {motif.terms.map((term) => <li>{term}</li>)}
+          </ul>
+        </details>
+      ))
+    }
   </section>
 </BaseLayout>

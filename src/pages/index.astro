@@ -3,16 +3,43 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
 const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${path}`);
+
+const motifs = [
+  {
+    title: "Anxiété et stress",
+    text: "Crises d’angoisse, tension intérieure, sentiment de débordement, inquiétude persistante, insomnie."
+  },
+  {
+    title: "Burn-out et dépression",
+    text: "Épuisement psychique, perte d’élan, retrait, difficulté à retrouver des repères et une énergie vitale, ruminations."
+  },
+  {
+    title: "Addictions",
+    text: "Dépendances, répétitions, conduites d’échappement et rapport difficile à la limite ou au manque, obsessions."
+  },
+  {
+    title: "Troubles des conduites alimentaires (TCA)",
+    text: "Rapport conflictuel au corps, à l’alimentation, au contrôle ou à la régulation émotionnelle."
+  },
+  {
+    title: "Trauma",
+    text: "Événements difficiles, traces persistantes, état d’alerte, sidération, envahissement émotionnel, hypervigilance, cauchemars à répétition, dissociation."
+  },
+  {
+    title: "Deuil et perte de sens",
+    text: "Séparations, ruptures, décès, remaniements de vie, crises existentielles, étapes de vie, grossesse, post-partum, mariage, déménagement, réorientation professionnelle, retraite."
+  }
+];
 ---
 
 <BaseLayout
   title="Charles-Antoine Menanteau | Psychologue clinicien"
-  description="Charles-Antoine Menanteau, psychologue clinicien, psychothérapeute et hypnothérapeute à Nantes et en visio."
+  description="Charles-Antoine Menanteau, psychologue clinicien, psychothérapeute et hypnothérapeute à Nantes et Clisson."
   currentPath="/"
 >
   <section class="hero">
     <div class="hero-copy">
-      <p class="page-eyebrow">Psychologue clinicien · Nantes et visio</p>
+      <p class="page-eyebrow">Psychologue clinicien · Nantes et Clisson</p>
       <h1>
         Accompagner<br />
         les périodes de crise et de<br />
@@ -30,7 +57,7 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
         <a class="button button-secondary" href={withBase("/approche")}>Découvrir mon approche</a>
       </div>
       <p class="hero-note">
-        Consultations en cabinet et en visio
+        Consultations en cabinet à Nantes et à Clisson
       </p>
     </div>
 
@@ -51,8 +78,8 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
       <span class="heading-rule"></span>
       <p class="section-intro">
         Cette page d’accueil présente les grands repères de la pratique. Chaque rubrique se déploie
-        ensuite pour préciser l’approche clinique, les motifs de consultation, le cadre des séances
-        et les informations pratiques.
+        ensuite pour préciser l’approche clinique, les motifs de consultation, le cadre des séances,
+        le parcours et les ressources utiles.
       </p>
     </div>
 
@@ -77,8 +104,8 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
       <article class="page-teaser">
         <h3>Déroulement des séances</h3>
         <p>
-          Mieux comprendre le premier rendez-vous, le cadre de suivi, les modalités de consultation
-          et la place des différents outils.
+          Mieux comprendre le premier rendez-vous, le cadre de suivi et la place des différents
+          outils.
         </p>
         <a href={withBase("/seances")}>Voir la page</a>
       </article>
@@ -89,6 +116,14 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
           pratique.
         </p>
         <a href={withBase("/parcours")}>Découvrir le parcours</a>
+      </article>
+      <article class="page-teaser">
+        <h3>Liens utiles</h3>
+        <p>
+          Accéder aux ressources et structures associées à la pratique: La Note Bleue, IFH,
+          Ipnosia, CESHUM.
+        </p>
+        <a href={withBase("/liens-utiles")}>Voir les liens</a>
       </article>
     </div>
   </section>
@@ -106,86 +141,20 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
     </div>
 
     <div class="motif-list">
-      <details class="motif-panel">
-        <summary class="motif-summary">
-          <span class="motif-title">
-            <span class="motif-kicker">Anxiété</span>
-            <span class="motif-heading">Anxiété et stress</span>
-          </span>
-          <span class="motif-toggle" aria-hidden="true"></span>
-        </summary>
-        <div class="motif-detail">
-          <p>
-            Crises d’angoisse, tension intérieure, sentiment de débordement ou difficulté à
-            retrouver un apaisement durable.
-          </p>
-          <a class="text-link" href={withBase("/motifs")}>Voir la page motifs</a>
-        </div>
-      </details>
-      <details class="motif-panel">
-        <summary class="motif-summary">
-          <span class="motif-title">
-            <span class="motif-kicker">Épuisement</span>
-            <span class="motif-heading">Burn-out et dépression</span>
-          </span>
-          <span class="motif-toggle" aria-hidden="true"></span>
-        </summary>
-        <div class="motif-detail">
-          <p>
-            Épuisement psychique, perte d’élan, fatigue morale, retrait ou difficulté à retrouver
-            des repères dans le quotidien.
-          </p>
-          <a class="text-link" href={withBase("/motifs")}>Voir la page motifs</a>
-        </div>
-      </details>
-      <details class="motif-panel">
-        <summary class="motif-summary">
-          <span class="motif-title">
-            <span class="motif-kicker">Dépendances</span>
-            <span class="motif-heading">Addictions et dépendances</span>
-          </span>
-          <span class="motif-toggle" aria-hidden="true"></span>
-        </summary>
-        <div class="motif-detail">
-          <p>
-            Conduites répétitives, dépendances, rapport difficile au manque, à la limite ou aux
-            formes d’évitement.
-          </p>
-          <a class="text-link" href={withBase("/motifs")}>Voir la page motifs</a>
-        </div>
-      </details>
-      <details class="motif-panel">
-        <summary class="motif-summary">
-          <span class="motif-title">
-            <span class="motif-kicker">Corps</span>
-            <span class="motif-heading">Troubles alimentaires</span>
-          </span>
-          <span class="motif-toggle" aria-hidden="true"></span>
-        </summary>
-        <div class="motif-detail">
-          <p>
-            Rapport conflictuel au corps, à l’alimentation, au contrôle ou à la régulation
-            émotionnelle.
-          </p>
-          <a class="text-link" href={withBase("/motifs")}>Voir la page motifs</a>
-        </div>
-      </details>
-      <details class="motif-panel">
-        <summary class="motif-summary">
-          <span class="motif-title">
-            <span class="motif-kicker">Événements difficiles</span>
-            <span class="motif-heading">Trauma, deuil et perte de sens</span>
-          </span>
-          <span class="motif-toggle" aria-hidden="true"></span>
-        </summary>
-        <div class="motif-detail">
-          <p>
-            Événements difficiles, séparations, ruptures, traces persistantes, crise existentielle
-            ou impression de désorientation.
-          </p>
-          <a class="text-link" href={withBase("/motifs")}>Voir la page motifs</a>
-        </div>
-      </details>
+      {
+        motifs.map((motif) => (
+          <details class="motif-panel">
+            <summary class="motif-summary">
+              <span class="motif-heading">{motif.title}</span>
+              <span class="motif-toggle" aria-hidden="true"></span>
+            </summary>
+            <div class="motif-detail">
+              <p>{motif.text}</p>
+              <a class="text-link" href={withBase("/motifs")}>Voir la page motifs</a>
+            </div>
+          </details>
+        ))
+      }
     </div>
 
     <div class="section-link-row">
@@ -267,30 +236,25 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
       <span class="heading-rule"></span>
       <p class="section-intro">
         Le travail clinique s’appuie sur une formation universitaire, des approfondissements
-        thérapeutiques, une pratique de terrain et un travail de transmission.
+        thérapeutiques, une pratique de terrain, un travail de transmission et de supervision.
       </p>
     </div>
 
-    <div class="parcours-timeline">
+    <div class="parcours-timeline parcours-timeline-compact">
       <article class="timeline-step">
-        <p class="timeline-meta">2012 / 2014</p>
+        <p class="timeline-meta">2009-2014</p>
         <h3>Formation universitaire</h3>
-        <p>Psychologie clinique, recherche et approfondissement de la question de l’image mentale en psychothérapie.</p>
+        <p>Psychologie clinique, recherche, pratique, pour l’obtention du diplôme de psychologue clinicien et psychothérapeute.</p>
       </article>
       <article class="timeline-step">
-        <p class="timeline-meta">2014 / 2016</p>
+        <p class="timeline-meta">2012-2020</p>
         <h3>Approfondissements cliniques</h3>
-        <p>Travail psycho-corporel, respiration, pratiques transpersonnelles et exploration de médiations thérapeutiques complémentaires.</p>
+        <p>Psychanalyse, anthropologie clinique, travail psycho-corporel, respiration et pratiques transpersonnelles.</p>
       </article>
       <article class="timeline-step">
         <p class="timeline-meta">Depuis 2020</p>
-        <h3>Pratique et transmission</h3>
-        <p>Consultations, transmission phénoméno-existentielle et accompagnement des crises de sens, du trauma et de l’épuisement.</p>
-      </article>
-      <article class="timeline-step">
-        <p class="timeline-meta">Aujourd’hui</p>
-        <h3>Hypnose et imaginaire</h3>
-        <p>Intégration progressive de l’hypnose, du rêve éveillé et du travail de l’imaginaire dans une pratique ajustée à chaque personne.</p>
+        <h3>Transmission, initiation, supervision</h3>
+        <p>Hypnose, rêve éveillé phénoméno-existentiel et travail de l’imaginaire.</p>
       </article>
     </div>
 
@@ -310,10 +274,23 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
     <div class="cta-contact">
       <div>
         <h3>Prendre rendez-vous</h3>
-        <p>En cabinet à Nantes<br />ou en visio</p>
+        <p>En cabinet à Nantes<br />ou à Clisson</p>
         <span class="heading-rule"></span>
         <a class="text-link text-link-dark" href={withBase("/contact")}>Accéder à la page contact</a>
       </div>
+    </div>
+  </section>
+
+  <section class="profile-signoff" aria-label="Charles-Antoine Menanteau">
+    <img
+      class="profile-portrait"
+      src={withBase("/assets/charles-antoine-menanteau.jpg")}
+      alt="Portrait de Charles-Antoine Menanteau"
+      loading="lazy"
+    />
+    <div>
+      <p class="page-eyebrow">Charles-Antoine Menanteau</p>
+      <p>Psychologue clinicien · Psychothérapeute · Hypnothérapeute</p>
     </div>
   </section>
 </BaseLayout>

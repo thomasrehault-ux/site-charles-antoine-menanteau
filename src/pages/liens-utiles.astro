@@ -1,0 +1,82 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+const resources = [
+  {
+    title: "Cabinet La Note Bleue",
+    description: "Cabinet pluridisciplinaire nantais spécialisé dans la trajectoire de soin des troubles des conduites alimentaires.",
+    href: "https://cabinet-lanotebleue-nantes.fr/"
+  },
+  {
+    title: "Association La Note Bleue",
+    description: "Association d’information, d’orientation et de soutien pour les personnes concernées par les troubles alimentaires et leur entourage.",
+    href: "https://association-lanotebleue.fr/"
+  },
+  {
+    title: "Neuroasis",
+    description: "Ressource à relier lorsque l’URL officielle aura été confirmée.",
+    href: ""
+  },
+  {
+    title: "Aude Réhault",
+    description: "Référence clinique autour des troubles des conduites alimentaires, au sein de l’équipe du Cabinet La Note Bleue.",
+    href: "https://cabinet-lanotebleue-nantes.fr/equipe/"
+  },
+  {
+    title: "Institut Français d’Hypnose, IFH",
+    description: "Institut de formation et de ressources autour de l’hypnose thérapeutique.",
+    href: "https://www.hypnose.fr/"
+  },
+  {
+    title: "Ipnosia",
+    description: "Formation, pratique et transmission en hypnose thérapeutique.",
+    href: "https://ipnosia.fr/"
+  },
+  {
+    title: "CESHUM",
+    description: "Centre d’enseignement, de recherche et de transmission autour des pratiques humanistes et transpersonnelles.",
+    href: "https://ceshum.net/"
+  }
+];
+---
+
+<BaseLayout
+  title="Liens utiles | Charles-Antoine Menanteau"
+  description="Liens utiles: Cabinet La Note Bleue, Association La Note Bleue, IFH, Ipnosia, CESHUM et ressources associées."
+  currentPath="/liens-utiles"
+>
+  <section class="page-hero-grid">
+    <div class="page-hero-copy">
+      <p class="page-eyebrow">Liens utiles</p>
+      <h1>Ressources, structures et repères associés à la pratique.</h1>
+      <span class="heading-rule"></span>
+      <p class="page-intro">
+        Une sélection de liens vers des structures, instituts et ressources en lien avec la clinique,
+        les troubles des conduites alimentaires, l’hypnose et les approches complémentaires.
+      </p>
+    </div>
+    <div class="page-hero-visual">
+      <div class="page-hero-art page-hero-art-interior"></div>
+    </div>
+  </section>
+
+  <section class="resource-grid page-section">
+    {
+      resources.map((resource) => (
+        <article class="resource-card">
+          <h2>{resource.title}</h2>
+          <p>{resource.description}</p>
+          {
+            resource.href ? (
+              <a class="text-link" href={resource.href} target="_blank" rel="noreferrer">
+                Accéder au site
+              </a>
+            ) : (
+              <p class="resource-note">Lien à confirmer.</p>
+            )
+          }
+        </article>
+      ))
+    }
+  </section>
+</BaseLayout>

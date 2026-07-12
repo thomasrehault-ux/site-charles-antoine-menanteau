@@ -4,17 +4,18 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout
   title="Parcours et formation | Charles-Antoine Menanteau"
-  description="Parcours, formation, experience clinique et reperes de supervision de Charles-Antoine Menanteau."
+  description="Parcours universitaire, formations complémentaires, expérience clinique et repères de supervision de Charles-Antoine Menanteau."
   currentPath="/parcours"
 >
   <section class="page-hero-grid">
     <div class="page-hero-copy">
       <p class="page-eyebrow">Parcours</p>
-      <h1>Une pratique soutenue par la formation, l'experience clinique et la supervision.</h1>
+      <h1>Une pratique soutenue par la formation, l’expérience clinique et la supervision.</h1>
       <span class="heading-rule"></span>
       <p class="page-intro">
-        Cette page a vocation a presenter de facon plus detaillee le parcours universitaire, les
-        formations complementaires, les transmissions recues et les champs d'experience clinique.
+        Cette page présente de façon plus détaillée le parcours universitaire, les formations
+        complémentaires, les transmissions reçues, les champs d’expérience clinique, les constellations
+        d’auteurs et les cadres de référence en lien avec la pratique.
       </p>
     </div>
     <div class="page-hero-visual page-hero-visual-soft">
@@ -23,35 +24,132 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   </section>
 
   <section class="timeline page-section">
-    <details class="timeline-item dynamic-panel">
+    <details class="timeline-item dynamic-panel" open>
       <summary class="dynamic-summary">
         <span>
           <span class="dynamic-kicker">Repère 01</span>
-          <span class="dynamic-heading">Formation universitaire</span>
+          <span class="dynamic-heading">Formation universitaire 2009-2014</span>
         </span>
         <span class="dynamic-toggle" aria-hidden="true"></span>
       </summary>
-      <p>Master 2 de psychologie clinique, travaux de recherche et experience de terrain en clinique institutionnelle.</p>
+      <div class="timeline-detail">
+        <p>
+          Master 2 de psychologie clinique, diplômé de l’UCO-IPSA (Université Catholique de l’Ouest).
+        </p>
+        <h2>Travaux de recherche</h2>
+        <ul class="detail-list">
+          <li>Éparpillement et dissociation, clinique de la schizophrénie, 2012. Mention TB.</li>
+          <li>Impact de l’expérience paroxystique dans le développement de la personne, 2013. Mention TB.</li>
+          <li>Clinique et machine: l’utilisation thérapeutique de la Stimulation Magnétique Transcrânienne, 2014. Mention TB.</li>
+        </ul>
+      </div>
     </details>
+
     <details class="timeline-item dynamic-panel">
       <summary class="dynamic-summary">
         <span>
           <span class="dynamic-kicker">Repère 02</span>
-          <span class="dynamic-heading">Formations complementaires</span>
+          <span class="dynamic-heading">Formations complémentaires, initiation et supervision depuis 2012</span>
         </span>
         <span class="dynamic-toggle" aria-hidden="true"></span>
       </summary>
-      <p>Hypnose therapeutique, rTMS, travail psycho-corporel, respiration, imaginaire et transmission phenomeno-existentielle.</p>
+      <div class="timeline-detail">
+        <ul class="detail-list">
+          <li><strong>Anthropologie clinique, 2012-2014</strong>, auprès de Philippe Grosbois, docteur en psychologie clinique.</li>
+          <li><strong>Psychanalyse, 2012-2015</strong>, auprès d’Alain Meunier, psychiatre, psychanalyste.</li>
+          <li><strong>rTMS, 2013</strong>, auprès de l’AFPBN (Association Française de Psychiatrie Biologique et de Neuropharmacologie).</li>
+          <li><strong>Hypnose thérapeutique, 2015</strong>, auprès d’Emmanuel Soutrenon, psychologue clinicien, psychothérapeute, hypnothérapeute.</li>
+          <li><strong>Accompagnement à domicile pour les personnes atteintes de cancer, 2016</strong>, auprès de Proxiligue, la Ligue contre le Cancer.</li>
+          <li><strong>Le toucher et la présence en psychothérapie transpersonnelle, 2016</strong>, auprès de Michel Protopopoff.</li>
+          <li><strong>Imaginaire et rêve éveillé phénoméno-existentiel, depuis 2020</strong>, auprès d’Oleg Poliakow, fondateur de l’IREPHE.</li>
+        </ul>
+      </div>
     </details>
+
     <details class="timeline-item dynamic-panel">
       <summary class="dynamic-summary">
         <span>
           <span class="dynamic-kicker">Repère 03</span>
-          <span class="dynamic-heading">Experience clinique</span>
+          <span class="dynamic-heading">Expérience clinique depuis 2010</span>
         </span>
         <span class="dynamic-toggle" aria-hidden="true"></span>
       </summary>
-      <p>Consultations aupres d'adolescents et d'adultes, accompagnement des troubles alimentaires, des crises de sens, du trauma et de la depression.</p>
+      <div class="timeline-detail">
+        <div class="reference-columns">
+          <article>
+            <h2>Psychiatrie institutionnelle</h2>
+            <ul class="detail-list">
+              <li>CESAME (Angers, 2010): observation et participation à des ateliers thérapeutiques.</li>
+              <li>La Chesnaie (2011, 2013): clinique institutionnelle et psychothérapie institutionnelle.</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Dispositifs d’urgence et ambulatoire</h2>
+            <ul class="detail-list">
+              <li>SOS Dépression / PSYADOM (2012): entretiens, visites à domicile, groupes de parole, régulation téléphonique.</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Cabinets et centres spécialisés</h2>
+            <ul class="detail-list">
+              <li>Centre de la Dépression (2014-2016): consultations et groupes thérapeutiques.</li>
+              <li>Cabinet rue de Seine (2014-2016): psychothérapies enfants, adolescents, adultes, approche intégrative.</li>
+              <li>Pratique de la rTMS en contexte clinique (2014-2016).</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Pratique libérale</h2>
+            <ul class="detail-list">
+              <li>Cabinet libéral depuis 2016, à Clisson et Nantes: psychothérapies adolescents et adultes.</li>
+              <li>Cabinet La Note Bleue depuis 2016, à Nantes: prise en charge des troubles des conduites alimentaires.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </details>
+
+    <details class="timeline-item dynamic-panel">
+      <summary class="dynamic-summary">
+        <span>
+          <span class="dynamic-kicker">Repère 04</span>
+          <span class="dynamic-heading">Constellations d’auteurs, de cadres et d’influences</span>
+        </span>
+        <span class="dynamic-toggle" aria-hidden="true"></span>
+      </summary>
+      <div class="timeline-detail">
+        <div class="reference-columns">
+          <article>
+            <h2>Principaux champs cliniques</h2>
+            <ul class="detail-list">
+              <li>Addictions: Claude Olievenstein.</li>
+              <li>Troubles des conduites alimentaires: Aude Réhault.</li>
+              <li>Troubles existentiels, crises de sens et souffrance ontologique: Ludwig Binswanger, Carl G. Jung, Eugène Minkowski, Victor Frankl, Rollo May.</li>
+              <li>Psychotraumatologie: Joanna Smith.</li>
+              <li>Burn-out et dépression: Alain Meunier.</li>
+              <li>Deuil et thanatologie: Elisabeth Kübler-Ross, Jean-Jacques Charbonnier, Kenneth Ring, Jean Prieur, Père François Brune.</li>
+              <li>Expériences paroxystiques et numineuses: Abraham Maslow, Karlfried Graf Dürckheim, Jean-Yves Leloup, Stanislav Grof, Roberto Assagioli, William James.</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Outils et paradigmes</h2>
+            <ul class="detail-list">
+              <li>Planigramme d’anticipation: Mario Berta.</li>
+              <li>Onirothérapie et travail thérapeutique du rêve: Robert Desoille, Medard Boss, Roger Frétigny, André Virel, Philippe Grosbois, Oleg Poliakow.</li>
+              <li>Paradigme transpersonnel: Stanislav Grof, Ken Wilber, Robert Monroe, David Bohm, Charles T. Tart, Rupert Sheldrake, Dean Radin.</li>
+              <li>Leibtherapie et présence: Wolfram Helke, Karlfried Graf Dürckheim.</li>
+            </ul>
+          </article>
+          <article>
+            <h2>Références philosophiques et mythologiques</h2>
+            <p>
+              Gaston Bachelard, Michel Henry, Maine de Biran, Henri Bergson, Karl Popper,
+              Franklin Merrell-Wolff, John C. Lilly, Gabriel Marcel, Mircea Eliade, Joseph Campbell,
+              Henry Corbin, Charles Mopsik, Terrence McKenna, Swedenborg, Moshe Idel, Aryeh Kaplan,
+              Satprem et Sri Aurobindo.
+            </p>
+          </article>
+        </div>
+      </div>
     </details>
   </section>
 </BaseLayout>

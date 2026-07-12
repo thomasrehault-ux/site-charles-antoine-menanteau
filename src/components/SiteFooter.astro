@@ -11,7 +11,7 @@ const withBase = (path: string) => (path === "/" ? `${baseUrl}/` || "/" : `${bas
   </div>
   <div>
     <h4>Informations pratiques</h4>
-    <p>Cabinet à Nantes<br />et consultations en visio</p>
+    <p>Cabinets à Nantes et Clisson</p>
     <p>Sur rendez-vous</p>
   </div>
   <div>
@@ -19,6 +19,7 @@ const withBase = (path: string) => (path === "/" ? `${baseUrl}/` || "/" : `${bas
     <p>06 00 00 00 00</p>
     <p>contact@charlesantoine-menanteau.fr</p>
     <p><a href={withBase("/contact")}>Formulaire de contact</a></p>
+    <p><a href={withBase("/liens-utiles")}>Liens utiles</a></p>
   </div>
   <div class="footer-mark" aria-hidden="true"></div>
 </footer>

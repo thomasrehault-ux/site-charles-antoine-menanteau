@@ -246,7 +246,7 @@ li {
   overflow: hidden;
   background:
     linear-gradient(90deg, rgba(255, 248, 239, 0.9), rgba(255, 248, 239, 0) 14%),
-    url("/site-charles-antoine-menanteau/assets/hero-art-generated.png") center/cover no-repeat;
+    var(--hero-art) center/cover no-repeat;
   border-radius: 8px 8px 0 0;
   box-shadow: var(--shadow-soft);
 }
@@ -714,7 +714,7 @@ li {
   inset: 0;
   background:
     linear-gradient(180deg, rgba(247, 244, 238, 0.06), rgba(247, 244, 238, 0.06)),
-    url("/site-charles-antoine-menanteau/assets/approach-art-regenerated.png") center / cover no-repeat;
+    var(--approach-art) center / cover no-repeat;
 }
 
 .approach-note {
@@ -789,25 +789,25 @@ li {
 .page-hero-art-approche {
   background:
     linear-gradient(180deg, rgba(247, 244, 238, 0.06), rgba(247, 244, 238, 0.06)),
-    url("/site-charles-antoine-menanteau/assets/approach-art-regenerated.png") center / cover no-repeat;
+    var(--approach-art) center / cover no-repeat;
 }
 
 .page-hero-art-motifs {
   background:
     linear-gradient(180deg, rgba(247, 244, 238, 0.08), rgba(247, 244, 238, 0.08)),
-    url("/site-charles-antoine-menanteau/assets/motifs-page-art.png") center / cover no-repeat;
+    var(--motifs-art) center / cover no-repeat;
 }
 
 .page-hero-art-interior {
   background:
     linear-gradient(180deg, rgba(247, 244, 238, 0.08), rgba(247, 244, 238, 0.08)),
-    url("/site-charles-antoine-menanteau/assets/interior-page-art.png") center / cover no-repeat;
+    var(--interior-art) center / cover no-repeat;
 }
 
 .page-hero-art-hero {
   background:
     linear-gradient(180deg, rgba(247, 244, 238, 0.08), rgba(247, 244, 238, 0.08)),
-    url("/site-charles-antoine-menanteau/assets/hero-art-generated.png") center / cover no-repeat;
+    var(--hero-art) center / cover no-repeat;
 }
 
 .page-section {
@@ -865,7 +865,7 @@ li {
   box-shadow: var(--shadow-soft);
   background:
     linear-gradient(180deg, rgba(247, 244, 238, 0.08), rgba(247, 244, 238, 0.08)),
-    url("/site-charles-antoine-menanteau/assets/approach-art-regenerated.png") center / cover no-repeat;
+    var(--approach-art) center / cover no-repeat;
 }
 
 .approach-manifesto {
@@ -966,7 +966,7 @@ li {
   box-shadow: var(--shadow-soft);
   background:
     linear-gradient(180deg, rgba(247, 244, 238, 0.08), rgba(247, 244, 238, 0.08)),
-    url("/site-charles-antoine-menanteau/assets/interior-page-art.png") center / cover no-repeat;
+    var(--interior-art) center / cover no-repeat;
 }
 
 .approach-editorial-copy {
@@ -1393,7 +1393,7 @@ li {
   background:
     linear-gradient(90deg, rgba(18, 44, 66, 0.76), rgba(18, 44, 66, 0.48)),
     linear-gradient(180deg, rgba(247, 244, 238, 0.08), rgba(247, 244, 238, 0.08)),
-    url("/site-charles-antoine-menanteau/assets/cabinet-cta.png") center / cover no-repeat;
+    var(--cabinet-art) center / cover no-repeat;
   overflow: hidden;
   border-radius: 8px;
 }

@@ -10,6 +10,15 @@ interface Props {
 }
 
 const { title, description, currentPath } = Astro.props;
+const baseUrl = import.meta.env.BASE_URL.replace(/\/$/, "");
+const withBase = (path: string) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${path}`);
+const assetStyle = [
+  `--hero-art: url("${withBase("/assets/hero-art-generated.png")}")`,
+  `--approach-art: url("${withBase("/assets/approach-art-regenerated.png")}")`,
+  `--motifs-art: url("${withBase("/assets/motifs-page-art.png")}")`,
+  `--interior-art: url("${withBase("/assets/interior-page-art.png")}")`,
+  `--cabinet-art: url("${withBase("/assets/cabinet-cta.png")}")`
+].join("; ");
 ---
 
 <!DOCTYPE html>
@@ -26,7 +35,7 @@ const { title, description, currentPath } = Astro.props;
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body style={assetStyle}>
     <SiteHeader currentPath={currentPath} />
     <div class="page-shell">
       <main>

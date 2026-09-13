@@ -4,10 +4,19 @@ const withBase = (path: string) => (path === "/" ? `${baseUrl}/` || "/" : `${bas
 ---
 
 <footer class="site-footer">
-  <div>
-    <h3>Charles-Antoine Menanteau</h3>
-    <p>Psychologue clinicien • Psychothérapeute<br />Hypnothérapeute</p>
-    <p>Une pratique clinique attentive à l’expérience vécue, aux crises de sens et aux transformations intérieures.</p>
+  <div class="footer-identity">
+    <div class="footer-portrait">
+      <img
+        src={withBase("/assets/charles-antoine-menanteau.jpg")}
+        alt="Portrait de Charles-Antoine Menanteau"
+        loading="lazy"
+      />
+    </div>
+    <div class="footer-identity-copy">
+      <h3>Charles-Antoine Menanteau</h3>
+      <p>Psychologue clinicien • Psychothérapeute<br />Hypnothérapeute</p>
+      <p>Une pratique clinique attentive à l’expérience vécue, aux crises de sens et aux transformations intérieures.</p>
+    </div>
   </div>
   <div>
     <h4>Informations pratiques</h4>
@@ -16,10 +25,14 @@ const withBase = (path: string) => (path === "/" ? `${baseUrl}/` || "/" : `${bas
   </div>
   <div>
     <h4>Contact</h4>
-    <p>06 00 00 00 00</p>
-    <p>contact@charlesantoine-menanteau.fr</p>
-    <p><a href={withBase("/contact")}>Formulaire de contact</a></p>
-    <p><a href={withBase("/liens-utiles")}>Liens utiles</a></p>
+    <p><a href="tel:+33675184758">06 75 18 47 58</a></p>
+    <p><a href="mailto:charlesmenanteau@gmail.com">charlesmenanteau@gmail.com</a></p>
+    <p>
+      <a
+        href="https://www.doctolib.fr/psychologue/nantes/charles-antoine-menanteau"
+        target="_blank"
+        rel="noopener noreferrer"
+      >Prendre rendez-vous sur Doctolib</a>
+    </p>
   </div>
-  <div class="footer-mark" aria-hidden="true"></div>
 </footer>

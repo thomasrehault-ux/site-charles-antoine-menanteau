@@ -49,7 +49,31 @@ const withBase = (path) => (path === "/" ? `${baseUrl}/` || "/" : `${baseUrl}${p
     </article>
   </section>
 
-  <section class="cabinet-image page-section">
-    <img src={withBase("/assets/cabinet-cta.png")} alt="Espace de consultation calme et lumineux" loading="lazy" />
+  <section class="cabinet-gallery page-section" aria-labelledby="cabinet-gallery-title">
+    <div class="section-heading">
+      <p class="page-eyebrow">Le cabinet</p>
+      <h2 id="cabinet-gallery-title">Découvrir l’espace de consultation</h2>
+      <span class="heading-rule"></span>
+    </div>
+    <div class="cabinet-gallery-grid">
+      <figure>
+        <img
+          src={withBase("/assets/cabinet-vue-generale.jpg")}
+          alt="Vue générale du cabinet et de son espace d’accueil"
+          loading="lazy"
+          width="1600"
+          height="1200"
+        />
+      </figure>
+      <figure>
+        <img
+          src={withBase("/assets/cabinet-espace-therapeutique.jpg")}
+          alt="Fauteuil et espace thérapeutique du cabinet"
+          loading="lazy"
+          width="1600"
+          height="1200"
+        />
+      </figure>
+    </div>
   </section>
 </BaseLayout>

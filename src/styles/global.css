@@ -1430,6 +1430,29 @@ li {
   align-items: start;
 }
 
+.footer-legal {
+  grid-column: 1 / -1;
+  padding-top: 12px;
+  border-top: 1px solid rgba(239, 242, 244, 0.15);
+}
+
+.site-footer .footer-legal-link {
+  min-height: 24px;
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: rgba(239, 242, 244, 0.72);
+}
+
+.site-footer .footer-legal-link:hover,
+.site-footer .footer-legal-link:focus-visible {
+  color: #eff2f4;
+}
+
+.footer-legal-link:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+
 .footer-identity-copy h3 {
   margin-top: 5px;
 }

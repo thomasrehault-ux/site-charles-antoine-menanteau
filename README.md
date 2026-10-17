@@ -10,6 +10,7 @@ Base Astro pour le site vitrine de Charles-Antoine Menanteau.
 - `/seances`
 - `/parcours`
 - `/contact`
+- `/mentions-legales`
 
 ## Scripts
 
@@ -22,4 +23,5 @@ npm run dev
 
 - Les visuels de maquette ont été migrés dans `public/assets/`.
 - Le projet est structuré pour une évolution SEO multipage.
-- Les coordonnées et mentions légales sont encore des placeholders.
+- La page de mentions légales reprend les coordonnées et titres confirmés par le client.
+- L’adresse e-mail prévue doit encore être activée et testée avant de devenir un contact opérationnel.

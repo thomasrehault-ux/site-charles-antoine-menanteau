@@ -20,17 +20,62 @@ const navigation = [
 
 <header class="site-header">
   <a class="brand" href={withBase("/")}>
-    <span class="brand-title">Charles-Antoine Menanteau</span>
-    <span class="brand-subtitle">Psychologue clinicien • Psychothérapeute • Hypnothérapeute</span>
+    <span class="brand-title"><span>Charles-Antoine</span>{" "}<span>Menanteau</span></span>
+    <span class="brand-subtitle brand-subtitle-full">Psychologue clinicien • Psychothérapeute • Hypnothérapeute</span>
+    <span class="brand-subtitle brand-subtitle-short">Psychologue clinicien</span>
   </a>
 
-  <nav class="site-nav" aria-label="Navigation principale">
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-navigation" aria-label="Ouvrir le menu">
+    <svg class="menu-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+      <path d="M4 6h16" />
+      <path d="M4 12h16" />
+      <path d="M4 18h16" />
+    </svg>
+    <svg class="close-icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true">
+      <path d="m6 6 12 12M6 18 18 6" />
+    </svg>
+  </button>
+
+  <nav class="site-nav" id="site-navigation" aria-label="Navigation principale">
     {
       navigation.map((item) => (
-        <a class={currentPath === item.href ? "is-active" : ""} href={withBase(item.href)}>
+        <a class={currentPath === item.href ? "is-active" : ""} href={withBase(item.href)} aria-current={currentPath === item.href ? "page" : undefined}>
           {item.label}
         </a>
       ))
     }
+    <p class="menu-profession">Psychologue clinicien • Psychothérapeute • Hypnothérapeute</p>
   </nav>
 </header>
+
+<script>
+  const header = document.querySelector<HTMLElement>(".site-header");
+  const toggle = header?.querySelector<HTMLButtonElement>(".menu-toggle");
+  const navigation = header?.querySelector<HTMLElement>(".site-nav");
+
+  if (header && toggle && navigation) {
+    const setOpen = (open: boolean) => {
+      toggle.setAttribute("aria-expanded", String(open));
+      toggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+    };
+
+    toggle.addEventListener("click", () => setOpen(toggle.getAttribute("aria-expanded") !== "true"));
+    navigation.addEventListener("click", (event) => {
+      if (event.target instanceof Element && event.target.closest("a")) setOpen(false);
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape" && toggle.getAttribute("aria-expanded") === "true") {
+        setOpen(false);
+        toggle.focus();
+      }
+    });
+    document.addEventListener("pointerdown", (event) => {
+      if (event.target instanceof Node && !header.contains(event.target)) setOpen(false);
+    });
+    header.addEventListener("focusout", (event) => {
+      if (!(event.relatedTarget instanceof Node) || !header.contains(event.relatedTarget)) setOpen(false);
+    });
+    window.matchMedia("(max-width: 1100px)").addEventListener("change", () => setOpen(false));
+    header.dataset.menuReady = "true";
+  }
+</script>

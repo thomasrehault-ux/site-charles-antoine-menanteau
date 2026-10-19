@@ -1,0 +1,6 @@
+# Les aperçus Cloudflare restent hors des résultats des moteurs de recherche.
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow
+
+https://:branch.:project.pages.dev/*
+  X-Robots-Tag: noindex, nofollow

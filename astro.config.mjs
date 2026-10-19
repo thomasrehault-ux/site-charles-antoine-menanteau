@@ -1,6 +1,6 @@
 import { defineConfig } from "astro/config";
 
 export default defineConfig({
-  site: "https://thomasrehault-ux.github.io",
-  base: "/site-charles-antoine-menanteau"
+  site: process.env.SITE_URL || "https://charlesantoinemenanteau.fr",
+  base: process.env.SITE_BASE_PATH || "/"
 });

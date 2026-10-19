@@ -37,6 +37,9 @@ jobs:
 
       - name: Build Astro site
         run: npm run build
+        env:
+          SITE_URL: https://thomasrehault-ux.github.io
+          SITE_BASE_PATH: /site-charles-antoine-menanteau
 
       - name: Upload static artifact
         uses: actions/upload-pages-artifact@v3

@@ -807,6 +807,12 @@ li {
     var(--interior-art) center / cover no-repeat;
 }
 
+.page-hero-art-interior-illustration {
+  background:
+    linear-gradient(180deg, rgba(247, 244, 238, 0.08), rgba(247, 244, 238, 0.08)),
+    var(--interior-illustration-art) center / cover no-repeat;
+}
+
 .page-hero-art-hero {
   background:
     linear-gradient(180deg, rgba(247, 244, 238, 0.08), rgba(247, 244, 238, 0.08)),
@@ -968,8 +974,8 @@ li {
   border-radius: 24px 24px 0 24px;
   box-shadow: var(--shadow-soft);
   background:
-    linear-gradient(180deg, rgba(247, 244, 238, 0.04), rgba(247, 244, 238, 0.04)),
-    var(--cabinet-detail-art) center / cover no-repeat;
+    linear-gradient(180deg, rgba(247, 244, 238, 0.08), rgba(247, 244, 238, 0.08)),
+    var(--interior-illustration-art) center / cover no-repeat;
 }
 
 .approach-editorial-copy {

@@ -52,3 +52,7 @@ Cette adresse est un projet : le nom de domaine n’a pas été vérifié ou ré
 - Aperçu local : réponse HTTP 200 et rendu vérifié dans le navigateur à 1280 px.
 - Navigation depuis le lien « Mentions légales » du pied de page de l’accueil vérifiée.
 - L’adresse e-mail prévue n’est pas un lien actif ; le lien téléphonique utilise le numéro international correspondant au numéro fourni.
+
+## Préparation Cloudflare du 19 octobre 2026
+
+Le code adapte désormais l’hébergeur au profil de compilation : Cloudflare à la racine, GitHub pour l’aperçu sous le sous-répertoire. Les coordonnées Cloudflare ont été vérifiées sur sa [politique de confidentialité](https://www.cloudflare.com/privacypolicy/). Cela prépare la publication ; aucun hébergement Cloudflare n’a encore été créé pour Charles. L’adresse e-mail reste en attente d’activation. Voir `docs/mise-en-ligne.md`.

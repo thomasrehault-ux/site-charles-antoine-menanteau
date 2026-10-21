@@ -15,17 +15,16 @@ Document de suivi du 17 octobre 2026. La page correspondante est créée dans `s
 - Diplôme : Master 2 de psychologie clinique, UCO-IPSA (Université Catholique de l’Ouest), intitulé confirmé par Thomas.
 - Directeur de la publication : Charles-Antoine Menanteau.
 
-## Adresse e-mail prévue
+## Adresse e-mail active
 
-Adresse retenue pour la future messagerie : `contact@charlesantoinemenanteau.fr`.
+Adresse de messagerie : `contact@charlesantoinemenanteau.fr`.
 
-Cette adresse est un projet : le nom de domaine n’a pas été vérifié ou réservé dans cette conversation, et la boîte e-mail n’a pas été créée ni testée. Ne pas présenter cette adresse comme un contact opérationnel avant son activation et un test d’envoi et de réception.
+Domaine enregistré et boîte Zimbra Starter créée le 21 octobre 2026. Thomas confirme le test d’envoi et de réception ; lien `mailto:` activé dans les mentions. Hébergement public chez Cloudflare Pages ; la version GitHub Pages conserve les coordonnées de GitHub.
 
 ## Informations restant à compléter pour finaliser la page
 
-- Activation et vérification de l’adresse e-mail prévue.
-- Numéro de TVA intracommunautaire, uniquement s’il en existe un applicable à l’activité.
-- Actualiser l’hébergeur si le site est déplacé. La page utilise actuellement GitHub, Inc. (GitHub Pages) ; réserver un domaine ou une messagerie chez OVHcloud ne change pas, à lui seul, l’hébergement du site.
+- Aucune TVA intracommunautaire à publier : Thomas confirme que Charles n’en possède pas.
+- L’adresse de facturation du compte OVH à Clisson est distincte de l’adresse professionnelle du cabinet publiée sur le site, conservée conformément à sa confirmation.
 
 ## Mise en œuvre
 

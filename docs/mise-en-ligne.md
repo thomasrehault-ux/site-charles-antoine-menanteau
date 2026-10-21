@@ -1,6 +1,6 @@
 # Mise en ligne — Charles-Antoine Menanteau
 
-Préparation du 19 octobre et exécution du 21 octobre 2026, limitées à l’hébergement, au domaine et à la messagerie. **Site public actif sur https://charlesantoinemenanteau.fr/ ; boîte contact active et testée par Thomas.** La dernière publication du lien e-mail est en cours. Le journal d’exécution ci-dessous fait foi ; les étapes initiales décrivent la procédure préparée avant achat.
+Préparation du 19 octobre et exécution du 21 octobre 2026, limitées à l’hébergement, au domaine et à la messagerie. **Mise en ligne terminée : https://charlesantoinemenanteau.fr/ ; boîte contact active et testée par Thomas ; lien e-mail publié.** Le journal d’exécution ci-dessous fait foi ; les étapes initiales décrivent la procédure préparée avant achat.
 
 ## Base et différences avec Aude
 
@@ -160,3 +160,11 @@ Thomas indique avoir fermé les pages avant de pouvoir contacter sa banque. Aucu
 - **Always Use HTTPS** activé. Contrôles publics avec validation TLS : huit pages, robots, sitemap, CSS et portrait en 200 ; URL inexistante en 404 ; canoniques du domaine ; aucun `noindex` sur le site public. HTTP et `www` redirigent en 301 vers le domaine canonique, chemin et paramètres conservés.
 - Bulk Redirect **charles_pages_vers_domaine** activée : liste `b29bcc2938e946f4a951b7abd090ead6`, règle `e78eae4b0a024d20b4ce18cdb0aad5c5`. Source `site-charles-antoine-menanteau.pages.dev`, cible `https://charlesantoinemenanteau.fr`, 301, sous-chemins et paramètres conservés, sous-domaines d’aperçu exclus. Test `/contact/?test=charles` : 301 exact ; aperçu immuable toujours 200 avec `noindex, nofollow`.
 - Lien mail activé dans le code des mentions et message d’attente supprimé, sans refonte. Build réussi et archive `/tmp/charles-cloudflare-final.zip` prête. Sélection manuelle du fichier dans Cloudflare demandée à Thomas à cause de la restriction d’import de l’extension ; dernier déploiement et contrôle distant du lien encore à effectuer.
+
+### Publication finale terminée — 21 octobre
+
+- Les deux domaines Pages `charlesantoinemenanteau.fr` et `www.charlesantoinemenanteau.fr` affichent **Active / SSL enabled**.
+- Thomas a sélectionné l’archive finale ; 24 fichiers importés. Publication de production réussie : **`5605a7d6-4eb6-4464-977c-92c1acd9da08`**, aperçu immuable https://5605a7d6.site-charles-antoine-menanteau.pages.dev/. Code de l’activation mail intégré par la PR [#6](https://github.com/thomasrehault-ux/site-charles-antoine-menanteau/pull/6), commit de fusion `446189e386f9272f8b03ca0b937d7cc7b1874354` (source de l’archive : `8a80dde`).
+- Vérification dans Chrome sur le domaine public : adresse visible et lien exact `mailto:contact@charlesantoinemenanteau.fr`, ancien message d’attente absent ; téléphone public inchangé. Cloudflare protège l’adresse dans le HTML brut et la restitue correctement dans le navigateur. Le HTML de l’aperçu immuable contient directement le mailto attendu.
+- Contrôles après la dernière publication : accueil, mentions, robots et sitemap en 200 ; URL inconnue en 404 ; `www` et l’hôte Pages de production en 301 vers les URL exactes avec paramètres conservés. HTTPS valide sans contournement de certificat.
+- **Mise en ligne terminée.** Remise des comptes, remplacement des contacts provisoires, éventuelle automatisation des publications et configuration Search Console restent des opérations de suivi distinctes, décrites plus haut.
